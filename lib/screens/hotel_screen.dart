@@ -15,7 +15,7 @@ class HotelScreen extends StatelessWidget {
 
     return Container(
       width: size.width * .6,
-      height: 350,
+      height: AppLayout.getHeight(350),
       margin: EdgeInsets.only(right: 17, top: 5),
       padding: EdgeInsets.symmetric(
         horizontal: 15,
@@ -37,7 +37,7 @@ class HotelScreen extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Container(
-            height: 180,
+            height: AppLayout.getHeight(180),
             decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(12),
               color: Styles.primaryColor,
@@ -49,12 +49,12 @@ class HotelScreen extends StatelessWidget {
           ),
           Gap(10),
           Text(
-            "Open space",
+            hotel['place'],
             style: Styles.headlineStyle2.copyWith(color: Styles.kakiColor),
           ),
           Gap(5),
           Text(
-            hotel['place'],
+            hotel['destination'],
             style: Styles.headlineStyle3.copyWith(
               color: Colors.white,
             ),
